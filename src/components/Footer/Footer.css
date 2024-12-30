@@ -31,3 +31,35 @@ footer {
         }
     }
 }
+
+@media (max-width: 600px){
+    footer {
+        height: 20px;
+        padding-bottom: 10px;
+        gap: 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    
+        img {
+            width: 40px;
+        }
+    
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        p {
+            color: rgba(255, 255, 255, 0.493);
+            font-weight: bold;
+            font-size: 12px;
+    
+            a {
+                color: rgb(210, 0, 0);
+            }
+        }
+    }
+}

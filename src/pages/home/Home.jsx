@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import genreMap from "../../AvaliableGenres.json"
+import { useMediaQuery } from "react-responsive";
 
 export const Home = () => {
     const [popularMoviesData, setPopularMoviesData] = useState(null)
@@ -14,6 +15,7 @@ export const Home = () => {
     const [centerMovie, setCenterMovie] = useState(null)
     const [trending, setTrending] = useState(null)
     const [heroVideoKey, setHeroVideoKey] = useState(null)
+    const isMobile = useMediaQuery({ maxWidth: 600 });
 
     const fetchPopularMovies = async () => {
         try {
@@ -134,7 +136,7 @@ export const Home = () => {
                                 &nbsp; ({centerMovie?.vote_count} votos)
                             </p>
                         </div>
-                        <p>{centerMovie?.overview}</p>
+                        <p className='pDes'>{centerMovie?.overview}</p>
                         <div className="buttons">
                             <Link className='button' to={centerMovie?.first_air_date ? `/series/details/${centerMovie?.id}` : `/movies/details/${centerMovie?.id}`}>
                                 <img width="20" height="20" src="https://img.icons8.com/material-rounded/24/visible.png" alt="visible" />
@@ -156,7 +158,7 @@ export const Home = () => {
                         </div>
                     </div>
                     {
-                        heroVideoKey ? (
+                        heroVideoKey && !isMobile ? (
                             <iframe
                                 className="iframeVideo"
                                 src={`https://www.youtube.com/embed/${heroVideoKey}?autoplay=1&controls=0&mute=1&loop=1&playlist=${heroVideoKey}&modestbranding=1&rel=0&cc_load_policy=0`}
@@ -179,7 +181,7 @@ export const Home = () => {
                         <h2>Trending Of The Day <img src={LogoSmall} alt="" /></h2>
                     </div>
                     <Slider
-                        dots={true}
+                        dots={false}
                         infinite={true}
                         speed={500}
                         slidesToShow={6}
@@ -189,6 +191,8 @@ export const Home = () => {
                             { breakpoint: 1200, settings: { slidesToShow: 5, slidesToScroll: 3 } },
                             { breakpoint: 1024, settings: { slidesToShow: 4, slidesToScroll: 2 } },
                             { breakpoint: 800, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+                            { breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                            { breakpoint: 450, settings: { slidesToShow: 1, slidesToScroll: 1 } },
                         ]}
                     >
                         {
@@ -215,7 +219,7 @@ export const Home = () => {
                         <Link to="/">See All Movies</Link>
                     </div>
                     <Slider
-                        dots={true}
+                        dots={false}
                         infinite={true}
                         speed={500}
                         slidesToShow={6}
@@ -225,6 +229,8 @@ export const Home = () => {
                             { breakpoint: 1200, settings: { slidesToShow: 5, slidesToScroll: 3 } },
                             { breakpoint: 1024, settings: { slidesToShow: 4, slidesToScroll: 2 } },
                             { breakpoint: 800, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+                            { breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                            { breakpoint: 450, settings: { slidesToShow: 1, slidesToScroll: 1 } },
                         ]}
                     >
                         {
@@ -250,7 +256,7 @@ export const Home = () => {
                         <h2>Top Rated Movies</h2>
                     </div>
                     <Slider
-                        dots={true}
+                        dots={false}
                         infinite={true}
                         speed={500}
                         slidesToShow={6}
@@ -260,6 +266,8 @@ export const Home = () => {
                             { breakpoint: 1200, settings: { slidesToShow: 5, slidesToScroll: 3 } },
                             { breakpoint: 1024, settings: { slidesToShow: 4, slidesToScroll: 2 } },
                             { breakpoint: 800, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+                            { breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                            { breakpoint: 450, settings: { slidesToShow: 1, slidesToScroll: 1 } },
                         ]}
                     >
                         {
@@ -286,7 +294,7 @@ export const Home = () => {
                         <Link to="/">See All Series</Link>
                     </div>
                     <Slider
-                        dots={true}
+                        dots={false}
                         infinite={true}
                         speed={500}
                         slidesToShow={6}
@@ -296,6 +304,8 @@ export const Home = () => {
                             { breakpoint: 1200, settings: { slidesToShow: 5, slidesToScroll: 3 } },
                             { breakpoint: 1024, settings: { slidesToShow: 4, slidesToScroll: 2 } },
                             { breakpoint: 800, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+                            { breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                            { breakpoint: 450, settings: { slidesToShow: 1, slidesToScroll: 1 } },
                         ]}
                     >
                         {
