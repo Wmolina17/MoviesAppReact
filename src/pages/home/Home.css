@@ -45,6 +45,7 @@ main {
                 font-weight: bold;
                 line-height: 80px;
                 margin-left: -5px;
+                overflow: hidden;
             }
 
             p {

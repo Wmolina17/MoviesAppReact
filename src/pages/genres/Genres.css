@@ -70,8 +70,8 @@
                 color: rgb(181, 181, 181);
                 margin-left: 5px;
                 font-size: 13px;
-                
-                span{
+
+                span {
                     color: white;
                     font-weight: bold;
                     font-size: 15px;
@@ -247,5 +247,216 @@
 
     75% {
         transform: translate(0, 160%)
+    }
+}
+
+@media (max-width: 1000px) {
+    .genresPageCont {
+        flex-direction: column;
+        gap: 20px;
+
+        .contMenu {
+            width: calc(100% - 40px);
+
+            h1 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            .buttons {
+                gap: 3px;
+
+                button {
+                    padding: 4px 12px;
+                }
+            }
+        }
+
+        .cont-cards {
+            padding: 0px;
+            width: 100%;
+            gap: 1%;
+            padding-top: 20px;
+
+            .headerResults {
+                p {
+                    margin-left: 5px;
+                    font-size: 13px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+                .paginationGen {
+                    gap: 10px;
+
+                    .aPage {
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                        gap: 10px;
+
+                        span {
+                            padding: 3px 9px;
+                        }
+                    }
+                }
+            }
+
+            .no-results {
+                gap: 20px;
+
+                p {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .genresPageCont {
+        gap: 10px;
+
+        .contMenu {
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 13px;
+                margin-top: 0;
+            }
+
+            .buttons {
+                gap: 3px;
+
+                button {
+                    font-size: 12px;
+                    padding: 3px 10px;
+                }
+            }
+        }
+
+        .cont-cards {
+            .headerResults {
+                p {
+                    margin-left: 10px;
+                    font-size: 13px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+                .paginationGen {
+                    gap: 5px;
+
+                    .aPage {
+                        padding: 3px 8px;
+                        border-radius: 5px;
+                        gap: 6px;
+                        font-size: 13px;
+
+                        span {
+                            font-size: 13px;
+                            padding: 3px 8px;
+                        }
+                    }
+                }
+            }
+
+            .no-results {
+                gap: 10px;
+                padding: 100px;
+
+                p {
+                    font-size: 13px;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .contCard {
+                height: 370px;
+
+                .movie {
+                    gap: 10px;
+
+                    img {
+                        width: 220px;
+                    }
+
+                    .cont-btn {
+                        padding: 7px 33px;
+                        font-size: 14px;
+
+                        p {
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .genresPageCont {
+        gap: 10px;
+
+        .contMenu {
+            h1 {
+                font-size: 18px;
+            }
+
+            .buttons {
+                gap: 3px;
+
+                button {
+                    padding: 3px 5px;
+                }
+            }
+        }
+
+        .cont-cards {
+            .no-results {
+                gap: 10px;
+                padding: 100px;
+
+                p {
+                    font-size: 13px;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .contCard {
+                height: 550px;
+
+                .movie {
+                    gap: 10px;
+
+                    img {
+                        width: 80%;
+                    }
+
+                    .cont-btn {
+                        margin-top: -32px !important;
+                        padding: 7px 20%;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
     }
 }
