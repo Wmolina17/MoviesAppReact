@@ -8,6 +8,7 @@ export const Search = () => {
     const [dataToSearch, setDataToSearch] = useState('');
     const [searchResults, setSearchResults] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+    window.document.title = "Mov · Search"
 
     const handleSearch = async () => {
         if (!dataToSearch.trim()) {

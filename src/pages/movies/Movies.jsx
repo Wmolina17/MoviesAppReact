@@ -11,6 +11,7 @@ export const Movies = () => {
     const [isLoadingUpcoming, setIsLoadingUpcoming] = useState(true)
     const [isLoadingPopular, setIsLoadingPopular] = useState(true)
     const [page, setPage] = useState(1)
+    window.document.title = "Mov · Movies"
 
     const getGenres = (genreIds) => {
         return genreIds.map(id => genreMap[id]).join(", ");

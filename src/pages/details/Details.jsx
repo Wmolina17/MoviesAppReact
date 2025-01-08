@@ -170,7 +170,9 @@ export const Details = () => {
   useEffect(() => {
     if (details) {
       setPercentage((details.vote_average / 10) * 100);
+      window.document.title = "Mov · " + (details.title || details.name)
     }
+
   }, [details]);
 
   const getRandomEmojis = () => {

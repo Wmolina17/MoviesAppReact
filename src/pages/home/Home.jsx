@@ -16,6 +16,7 @@ export const Home = () => {
     const [trending, setTrending] = useState(null)
     const [heroVideoKey, setHeroVideoKey] = useState(null)
     const isMobile = useMediaQuery({ maxWidth: 600 });
+    window.document.title = "Mov · Home"
 
     const fetchPopularMovies = async () => {
         try {

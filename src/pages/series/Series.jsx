@@ -11,6 +11,7 @@ export const Series = () => {
     const [isLoadingUpcoming, setIsLoadingUpcoming] = useState(true)
     const [isLoadingPopular, setIsLoadingPopular] = useState(true)
     const [page, setPage] = useState(1)
+    window.document.title = "Mov · Series"
 
     const getGenres = (genreIds) => {
         return genreIds

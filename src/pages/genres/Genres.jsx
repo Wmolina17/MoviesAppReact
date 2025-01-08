@@ -8,6 +8,7 @@ export const Genres = () => {
     const [allData, setAllData] = useState(null)
     const [genres, setGenres] = useState(["12"])
     const [page, setPage] = useState(1)
+    window.document.title = "Mov · Genres"
 
     const fetchDataByGenre = async () => {
         try {
