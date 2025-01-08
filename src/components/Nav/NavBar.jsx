@@ -24,7 +24,6 @@ export const NavBar = () => {
             </ul>
             <Link to="/search" className="inputGroup">
                 <img src={IconSearch} alt="" />
-                <p>Buscar</p>
             </Link>
         </nav>
     )

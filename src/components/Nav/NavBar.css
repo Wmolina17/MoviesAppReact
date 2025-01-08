@@ -43,29 +43,18 @@ nav {
     }
 
     .inputGroup {
-        transition: .3s ease-in-out;
-        width: 12%;
-        height: 30px;
         display: flex;
         align-items: center;
         background-color: rgba(255, 0, 0, 0.1);
-        color: rgb(60, 60, 60);
-        gap: 10px;
-        padding: 2px 10px;
+        padding: 10px;
         border: 2px solid rgba(255, 0, 0, 0.335);
-        border-radius: 7px;
-        text-decoration: none;
+        border-radius: 50%;
 
         img {
             filter: invert(100%);
-            opacity: .6;
+            opacity: .8;
             width: 20px;
             height: 20px;
-        }
-
-        p {
-            color: rgb(143, 143, 143);
-            font-weight: bold;
         }
     }
 }
@@ -93,10 +82,6 @@ nav {
                 }
             }
         }
-
-        .inputGroup {
-            display: none;
-        }
     }
 }
 
@@ -117,6 +102,14 @@ nav {
                     margin-bottom: 0px;
                 }
             }
+        }
+
+        .inputGroup {
+            position: absolute;
+            padding: 10px;
+            padding-bottom: 0;
+            top: 15px;
+            right: 20px;
         }
     }
 }

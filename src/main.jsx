@@ -8,6 +8,7 @@ import { Movies } from './pages/movies/Movies';
 import { Series } from './pages/series/Series';
 import { Genres } from './pages/genres/Genres';
 import { Details } from './pages/details/Details';
+import { Search } from './pages/search/Search';
 
 const Layout = () => {
   return (
@@ -29,6 +30,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/movies" element={<Movies />} />
         <Route path="/series" element={<Series />} />
         <Route path="/genres" element={<Genres />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/movies/details/:id" element={<Details />} />
         <Route path="/series/details/:id" element={<Details />} />
       </Route>

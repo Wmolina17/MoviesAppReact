@@ -497,7 +497,7 @@ export const Details = () => {
               {
                 recomendations?.map((movie, index) => (
                   movie.poster_path ? (
-                    <Link className='contCard' to={movie?.first_air_date ? `/series/details/${movie?.id}` : `/movies/details/${movie?.id}`}>
+                    <Link className='contCard' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} to={movie?.first_air_date ? `/series/details/${movie?.id}` : `/movies/details/${movie?.id}`}>
                       <div key={index} className="movie">
                         <img src={`https://image.tmdb.org/t/p/w1280${movie?.poster_path}`} alt={movie?.title} />
                         <div className='cont-btn'>
